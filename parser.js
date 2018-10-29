@@ -2086,7 +2086,7 @@ const parseJson = (input, needFieldInformation, componentMap) => {
                         type: "pattern-validator",
                         'pattern': field["validator_rule"]
                     }];
-                }
+                };
 
                 object1["component"] = componentMap[field["type"]];
                 
@@ -2096,7 +2096,7 @@ const parseJson = (input, needFieldInformation, componentMap) => {
                     } else {
                         defaultValues[field["name"]] = field["default_value"];
                     }
-                }
+                };
 
                 object1["options"] = []
                 if (Array.isArray(field["values"])) {
@@ -2131,9 +2131,9 @@ const parseJson = (input, needFieldInformation, componentMap) => {
         description: description,
         fields: formTabs,
         component: 'tabs'
-    }
+    };
     return {schema: schema,
-            defaultValues: defaultValues}
+            defaultValues: defaultValues};
 }
 
 
